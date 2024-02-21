@@ -33,11 +33,13 @@ class Footer extends Composer
 
         $output = [];
 
-        foreach ($social as $item) {
-            $output[] = [
-                'name' => $item['name'],
-                'url' => $item['url'],
-            ];
+        if (!empty($social)) {
+            foreach ($social as $item) {
+                $output[] = [
+                    'name' => $item['name'],
+                    'url' => $item['url'],
+                ];
+            }
         }
 
         return $output;
