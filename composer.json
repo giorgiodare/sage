@@ -40,7 +40,12 @@
   },
   "require": {
     "php": ">=8.1",
-    "roots/acorn": "^4.0"
+    "log1x/acf-composer": "^2.1",
+    "log1x/navi": "^2.0",
+    "log1x/sage-directives": "^2.0",
+    "log1x/sage-svg": "^1.1",
+    "roots/acorn": "^4.0",
+    "stoutlogic/acf-builder": "^1.12"
   },
   "require-dev": {
     "laravel/pint": "^1.13"
