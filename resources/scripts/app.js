@@ -1,4 +1,12 @@
 import domReady from '@roots/sage/client/dom-ready';
+import siteNavigation from './site-navigation.js';
+import siteSearch from './site-search.js';
+
+/* Site navigation */
+siteNavigation();
+
+/* Search */
+siteSearch();
 
 /**
  * Application entrypoint

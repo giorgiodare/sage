@@ -1,3 +1,143 @@
+@import 'common/fonts';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    @apply antialiased scroll-smooth;
+  }
+
+  body {
+    @apply font-sans bg-white text-black;
+  }
+
+  ::-moz-selection {
+    /* Code for Firefox */
+    @apply text-black bg-white;
+  }
+
+  ::selection {
+    @apply text-black bg-white;
+  }
+
+  :focus,
+  main:focus {
+    @apply outline-none;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline outline-offset-2 outline-primary-500;
+  }
+
+  a {
+    @apply underline;
+  }
+
+  a,
+  button {
+    transition: all 300ms ease-out;
+    transition-property: color, background-color, border-color,
+      text-decoration-color, fill, stroke;
+  }
+
+  /* Force reduced motion on all websites */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-delay: -1ms !important;
+      animation-duration: 1ms !important;
+      animation-iteration-count: 1 !important;
+      background-attachment: initial !important;
+      scroll-behavior: auto !important;
+      transition-duration: 0s !important;
+      transition-delay: 0s !important;
+    }
+  }
+}
+
+@layer components {
+  .button {
+    @apply cursor-pointer inline-flex items-center justify-center gap-2 text-base leading-5 font-medium py-3 px-4 rounded-xl;
+  }
+}
+
+/* Site Header */
+
+.site-header a {
+  @apply no-underline;
+}
+
+/* Site Navigation */
+
+.navigation li[data-parent='true'] {
+  @apply relative;
+}
+
+.nav-menu-container {
+  @apply hidden lg:block;
+}
+
+.site-header.show-nav #nav-button {
+  /* Prevent to disappear on breakpoint */
+  @apply grid;
+}
+
+.site-header.show-nav {
+  @apply text-black;
+}
+
+.site-header.show-nav .nav-menu-container {
+  @apply block pt-fluid-lg overflow-y-auto absolute inset-0 bg-primary-500 w-full h-full z-30;
+}
+
+.site-header.show-nav ul:not(.sub-menu) {
+  @apply flex flex-col gap-3 pt-fluid-xl container;
+}
+
+.site-header.show-nav *:focus-visible {
+  /* Change outline color if background match with default */
+  @apply outline-black;
+}
+
+.navigation a[aria-current='page'] {
+  @apply font-bold;
+}
+
+.navigation ul:not(.sub-menu) {
+  @apply flex flex-wrap gap-5;
+}
+
+/* Site Navigation Sub Menu */
+
+.navigation .sub-menu {
+  @apply pl-4 pt-4 pb-4;
+}
+
+.site-header:not(.show-nav) li[data-parent='true']:hover > .sub-menu,
+.site-header:not(.show-nav) li[data-parent='true']:focus > .sub-menu,
+.site-header:not(.show-nav) li[data-parent='true'].focus > .sub-menu {
+  @apply opacity-100 left-0 translate-y-0;
+}
+
+.site-header:not(.show-nav) .sub-menu {
+  --sub-menu-spacer: 1rem;
+  @apply bg-neutral-200 rounded-lg w-max min-w-[200px] opacity-0 p-3 absolute right-[9999rem] top-[calc(100%_+_var(--sub-menu-spacer,_1rem))] translate-y-4 transition-all z-20 before:content-[''] before:bottom-full before:block before:left-0 before:absolute before:right-0 before:h-[calc(var(--sub-menu-spacer,_1rem)_+_2px)];
+}
+
+/* Site Search */
+
+.site-header.show-search .search-container {
+  @apply opacity-100 top-12 right-0;
+}
+
+/* 404 */
+
+.error404 #app {
+  @apply flex flex-col min-h-screen;
+}
+
+.error404 #app > footer {
+  @apply mt-auto;
+}
