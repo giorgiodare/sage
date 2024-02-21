@@ -1737,7 +1737,7 @@
     tslib "2.6.2"
     webpack "5.89.0"
 
-"@roots/bud-postcss@6.20.0":
+"@roots/bud-postcss@6.20.0", "@roots/bud-postcss@^6.20.0":
   version "6.20.0"
   resolved "https://registry.yarnpkg.com/@roots/bud-postcss/-/bud-postcss-6.20.0.tgz#ccc1f58622139ca8b06ba5120e1580491ea38a5f"
   integrity sha512-5LvbFfP8rX5c0Pb8eaELH3KCpeHe+Yipk+gd3xRhBJzwOlBUYnR+dun0VjoAxGSCJTfFNA2ZStVv8Iu2DYIFqQ==

@@ -77,4 +77,9 @@ export default async (app) => {
     .useTailwindColors()
     .useTailwindFontFamily()
     .useTailwindFontSize();
+
+    app.postcss
+    .setPlugin(`tailwindcss/nesting`)
+    .setPlugin(`tailwindcss`)
+    .use([`import`, `tailwindcss/nesting`, `tailwindcss`, `env`]);
 };
