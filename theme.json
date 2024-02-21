@@ -1359,6 +1359,41 @@
           "name": "9xl",
           "size": "8rem",
           "slug": "9xl"
+        },
+        {
+          "name": "fluid-0",
+          "size": "clamp(1rem, 0.9167rem + 0.3333vi, 1.25rem)",
+          "slug": "fluid-0"
+        },
+        {
+          "name": "fluid-1",
+          "size": "clamp(1.25rem, 1.1458rem + 0.4167vi, 1.5625rem)",
+          "slug": "fluid-1"
+        },
+        {
+          "name": "fluid-2",
+          "size": "clamp(1.5625rem, 1.4323rem + 0.5208vi, 1.9531rem)",
+          "slug": "fluid-2"
+        },
+        {
+          "name": "fluid-3",
+          "size": "clamp(1.9531rem, 1.7904rem + 0.651vi, 2.4414rem)",
+          "slug": "fluid-3"
+        },
+        {
+          "name": "fluid-4",
+          "size": "clamp(2.4414rem, 2.238rem + 0.8138vi, 3.0518rem)",
+          "slug": "fluid-4"
+        },
+        {
+          "name": "fluid-5",
+          "size": "clamp(3.0518rem, 2.7974rem + 1.0173vi, 3.8147rem)",
+          "slug": "fluid-5"
+        },
+        {
+          "name": "fluid-6",
+          "size": "clamp(3.8147rem, 3.4968rem + 1.2716vi, 4.7684rem)",
+          "slug": "fluid-6"
         }
       ]
     }
